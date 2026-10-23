@@ -1,0 +1,100 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@layer base {
+  :root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+  }
+
+  html {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
+
+  body {
+    font-family: 'Vazirmatn', 'Noto Sans Arabic', 'DejaVu Sans', 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    color: #f8fafc;
+    background-color: #030712;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* When english */
+  [dir="ltr"] {
+    font-family: 'Plus Jakarta Sans', 'Vazirmatn', 'DejaVu Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  code, pre, kbd, samp {
+    font-family: 'JetBrains Mono', 'Vazirmatn', 'Noto Sans Arabic', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+    direction: ltr !important;
+    text-align: left !important;
+  }
+
+  .font-mono {
+    font-family: 'JetBrains Mono', 'Vazirmatn', 'Noto Sans Arabic', ui-monospace, monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Custom sleek scrollbars for code editors & trees */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.6);
+}
+
+/* Prism syntax highlighting theme - Studio Dark */
+.token.comment, .token.prolog, .token.doctype, .token.cdata {
+  color: #64748b;
+  font-style: italic;
+}
+.token.punctuation {
+  color: #94a3b8;
+}
+.token.property, .token.tag, .token.boolean, .token.number, .token.constant, .token.symbol, .token.deleted {
+  color: #f43f5e;
+}
+.token.selector, .token.attr-name, .token.string, .token.char, .token.builtin, .token.inserted {
+  color: #34d399;
+}
+.token.operator, .token.entity, .token.url, .language-css .token.string, .style .token.string {
+  color: #38bdf8;
+}
+.token.atrule, .token.attr-value, .token.keyword {
+  color: #60a5fa;
+  font-weight: 500;
+}
+.token.function, .token.class-name {
+  color: #fbbf24;
+}
+.token.regex, .token.important, .token.variable {
+  color: #c084fc;
+}
+
+/* Safe area utilities for iPhone Dynamic Island and Home Bar */
+.pt-safe {
+  padding-top: max(env(safe-area-inset-top), 12px);
+}
+.pb-safe {
+  padding-bottom: max(env(safe-area-inset-bottom), 16px);
+}
+.mb-safe {
+  margin-bottom: max(env(safe-area-inset-bottom), 16px);
+}
+.h-safe-screen {
+  height: 100dvh;
+}

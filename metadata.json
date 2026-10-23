@@ -1,0 +1,6 @@
+{
+  "name": "Code Converter Pro - مبدل کد هوشمند",
+  "description": "مبدل و ارتقا دهنده پیشرفته کد و معماری چندفایلی بهینه برای آیفون و موبایل با پشتیبانی دوزبانه فارسی و انگلیسی و زیرنویس تعاملی اعلانات آموزشی",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
